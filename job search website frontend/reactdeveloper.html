@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vacancy Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .vacancy-card {
+      margin-bottom: 20px;
+      opacity: 0; /* Set initial opacity to 0 */
+    }
+
+    .vacancy-card .card-title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .vacancy-card .card-subtitle {
+      color: #6c757d;
+      margin-bottom: 10px;
+    }
+
+    .vacancy-card .card-text {
+      margin-bottom: 10px;
+    }
+
+    .vacancy-card .card-text strong {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .vacancy-card .card-text ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    /* Center the button */
+    .vacancy-card .btn-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Animation */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Apply animation to cards */
+    .fade-in-animation {
+      animation: fade-in 1s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Job Vacancies</h1>
+    <div class="row">
+      <div class="col-md-6 vacancy-card fade-in-animation">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Full Stack Developer</h5>
+            <h6 class="card-subtitle mb-2 text-muted">ABC Company</h6>
+            <p class="card-text">New York, USA</p>
+            <p class="card-text">We are seeking a skilled Full Stack Developer to join our team...</p>
+            <p class="card-text"><strong>Requirements:</strong></p>
+            <ul>
+              <li>Strong proficiency in JavaScript and modern web technologies</li>
+              <li>Experience with frontend frameworks like React</li>
+              <li>Experience with backend technologies like Node.js</li>
+              <li>Familiarity with database systems such as MongoDB or MySQL</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal1">
+              Job Description
+            </button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+ 
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="jobModal1" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel1"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jobModalLabel1"> full stack Developer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We are looking for a talented full stack  Developer to join our software development team. The successful candidate will be responsible for designing, coding, and testing high-quality software applications using C++ programming language.</p>
+          <h6>Responsibilities:</h6>
+          <ul class="list-group">
+            <li class="list-group-item">Designing, developing, and maintaining web applications using Java, Bootstrap, and other relevant technologies.</li>
+            <li class="list-group-item">Implementing front-end designs using HTML, CSS, and Bootstrap framework.</li>
+            <li class="list-group-item">Developing back-end components and APIs using Java frameworks such as Spring and Spring Boot.</li>
+            <li class="list-group-item">Collaborating with cross-functional teams to define, design, and ship new features.</li>
+            <li class="list-group-item">Participating in code reviews and ensuring code quality and best practices.</li>
+            <li class="list-group-item">Troubleshooting and debugging issues, ensuring timely resolution of technical problems.</li>
+            <li class="list-group-item">Performing testing, including unit testing, integration testing, and end-to-end testing.</li>
+            <li class="list-group-item">Monitoring and optimizing application performance and security.</li>
+            <li class="list-group-item">Keeping up to date with industry trends and advancements in web development.</li>
+          </ul>
+      
+          <h2>Requirements:</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Strong proficiency in Java programming language and object-oriented design principles.</li>
+            <li class="list-group-item">Experience in front-end development using HTML, CSS, JavaScript, and Bootstrap.</li>
+            <li class="list-group-item">Hands-on experience with Java frameworks such as Spring and Spring Boot.</li>
+            <li class="list-group-item">Knowledge of database systems and SQL.</li>
+            <li class="list-group-item">Experience with version control systems like Git.</li>
+            <li class="list-group-item">Understanding of RESTful APIs and web services.</li>
+            <li class="list-group-item">Familiarity with Agile development methodologies.</li>
+            <li class="list-group-item">Excellent problem-solving skills and attention to detail.</li>
+            <li class="list-group-item">Strong communication and collaboration skills.</li>
+          </ul>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="col-lg-6 vacancy-card">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Senior Full Stack Developer</h5>
+            <h6 class="card-subtitle mb-2 text-muted">XYZ Corporation</h6>
+            <p class="card-text">San Francisco, USA</p>
+            <p class="card-text">We are looking for an experienced Senior Full Stack Developer to...</p>
+            <p class="card-text"><strong>Requirements:</strong></p>
+            <ul>
+              <li>Minimum 5 years of experience in full-stack development</li>
+              <li>Proficiency in multiple programming languages such as JavaScript, Python, or Java</li>
+              <li>Strong understanding of web application architecture</li>
+              
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal2">
+              Job Description
+            </button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+ 
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="jobModal2" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jobModalLabel2">senior full stack Developer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We are looking for a talented Senior full Stack Developer to join our software development team. The successful candidate will be responsible for designing, coding, and testing high-quality software applications using C++ programming language.</p>
+          <h2>Responsibilities:</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Leading and participating in the full software development lifecycle, including requirements analysis, design, development, testing, and deployment.</li>
+      <li class="list-group-item">Architecting and developing scalable and high-performance web applications using Java, Bootstrap, and other relevant technologies.</li>
+      <li class="list-group-item">Collaborating with cross-functional teams to define project requirements, scope, and deliverables.</li>
+      <li class="list-group-item">Mentoring and providing guidance to junior developers, reviewing their code, and ensuring adherence to coding standards and best practices.</li>
+      <li class="list-group-item">Designing and implementing robust front-end solutions using HTML, CSS, JavaScript, and Bootstrap framework.</li>
+      <li class="list-group-item">Building and integrating RESTful APIs and microservices using Java frameworks like Spring Boot.</li>
+      <li class="list-group-item">Optimizing application performance, scalability, and security.</li>
+      <li class="list-group-item">Troubleshooting complex technical issues and providing timely resolutions.</li>
+      <li class="list-group-item">Keeping up to date with emerging technologies, trends, and best practices in full-stack web development.</li>
+    </ul>
+
+    <h2>Requirements:</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Extensive experience in full-stack web development using Java, HTML, CSS, JavaScript, and Bootstrap.</li>
+      <li class="list-group-item">In-depth knowledge of Java frameworks such as Spring, Spring Boot, and Hibernate.</li>
+      <li class="list-group-item">Strong understanding of front-end development principles and proficiency in modern front-end technologies like React or Angular.</li>
+      <li class="list-group-item">Experience with database systems like MySQL, PostgreSQL, or MongoDB.</li>
+      <li class="list-group-item">Proven track record of delivering high-quality software solutions on time and within budget.</li>
+      <li class="list-group-item">Familiarity with DevOps practices, CI/CD pipelines, and cloud platforms like AWS or Azure.</li>
+      <li class="list-group-item">Solid understanding of software design patterns and architectural principles.</li>
+      <li class="list-group-item">Strong problem-solving and analytical skills, with a keen attention to detail.</li>
+      <li class="list-group-item">Excellent communication and leadership abilities.</li>
+    </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <div class="col-lg-6 vacancy-card">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Frontend Developer</h5>
+            <h6 class="card-subtitle mb-2 text-muted">123 Web Solutions</h6>
+            <p class="card-text">London, UK</p>
+            <p class="card-text">We are seeking a talented Frontend Developer to join our team...</p>
+            <p class="card-text"><strong>Requirements:</strong></p>
+            <ul>
+              <li>Proficiency in HTML, CSS, and JavaScript</li>
+              <li>Experience with frontend frameworks like React or Vue.js</li>
+              <li>Strong understanding of responsive web design</li>
+              <li>Knowledge of version control systems like Git</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal3">
+              Job Description
+            </button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+ 
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="jobModal3" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel3"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jobModalLabel3">frontend Developer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We are looking for a talented Frontend Developer to join our software development team. The successful candidate will be responsible for designing, coding, and testing high-quality software applications using C++ programming language.</p>
+          <h6>Responsibilities:</h6>
+          <h2>Responsibilities:</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Implementing user interfaces and web designs using HTML, CSS, and JavaScript frameworks like Bootstrap.</li>
+            <li class="list-group-item">Collaborating with UI/UX designers to translate design mockups into interactive web pages.</li>
+            <li class="list-group-item">Writing clean, maintainable, and efficient code for front-end components and features.</li>
+            <li class="list-group-item">Optimizing web applications for maximum speed and scalability.</li>
+            <li class="list-group-item">Ensuring cross-browser compatibility and responsiveness of web pages.</li>
+            <li class="list-group-item">Working closely with backend developers to integrate front-end components with server-side logic.</li>
+            <li class="list-group-item">Conducting thorough testing and debugging of web applications to ensure a smooth user experience.</li>
+            <li class="list-group-item">Staying up to date with the latest web development trends, techniques, and technologies.</li>
+            <li class="list-group-item">Collaborating with team members and stakeholders to define project requirements and deliverables.</li>
+          </ul>
+      
+          <h2>Requirements:</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Strong proficiency in HTML, CSS, and JavaScript.</li>
+            <li class="list-group-item">Experience with front-end frameworks and libraries, such as Bootstrap, jQuery, or React.</li>
+            <li class="list-group-item">Knowledge of responsive web design principles and techniques.</li>
+            <li class="list-group-item">Familiarity with version control systems, such as Git.</li>
+            <li class="list-group-item">Understanding of browser rendering behavior and performance optimization techniques.</li>
+            <li class="list-group-item">Experience with CSS preprocessors like Sass or Less.</li>
+            <li class="list-group-item">Knowledge of accessibility standards and best practices.</li>
+            <li class="list-group-item">Attention to detail and an eye for visual design.</li>
+            <li class="list-group-item">Excellent problem-solving and analytical skills.</li>
+            <li class="list-group-item">Strong communication and collaboration abilities.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+      <div class="col-lg-6 vacancy-card">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Backend Developer</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Tech Innovators</h6>
+            <p class="card-text">Berlin, Germany</p>
+            <p class="card-text">We are looking for a talented Backend Developer to join our team...</p>
+            <p class="card-text"><strong>Requirements:</strong></p>
+            <ul>
+              <li>Strong knowledge of backend programming languages like Python or Node.js</li>
+              <li>Experience with database systems such as MySQL or PostgreSQL</li>
+              <li>Understanding of server-side frameworks like Express.js</li>
+              
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal4">
+              Job Description
+            </button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+ 
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="jobModal4" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel4"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jobModalLabel4">Backend Developer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We are looking for a talented Backend Developer to join our software development team. The successful candidate will be responsible for designing, coding, and testing high-quality software applications using C++ programming language.</p>
+          <h2>Responsibilities:</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Developing server-side logic and APIs for web applications using programming languages like Java, Python, or Node.js.</li>
+            <li class="list-group-item">Designing and implementing scalable, secure, and efficient databases and data models.</li>
+            <li class="list-group-item">Collaborating with front-end developers to integrate server-side functionality with client-side code.</li>
+            <li class="list-group-item">Optimizing application performance and responsiveness through efficient database queries and caching techniques.</li>
+            <li class="list-group-item">Ensuring proper authentication, authorization, and data validation mechanisms.</li>
+            <li class="list-group-item">Implementing automated testing and quality assurance processes.</li>
+            <li class="list-group-item">Monitoring and troubleshooting application issues, ensuring smooth operation and timely resolution.</li>
+            <li class="list-group-item">Maintaining code integrity and organization through version control systems like Git.</li>
+            <li class="list-group-item">Staying up to date with emerging technologies, frameworks, and best practices in backend development.</li>
+            <li class="list-group-item">Collaborating with cross-functional teams to define project requirements and deliverables.</li>
+          </ul>
+      
+          <h2>Requirements:</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Strong proficiency in a backend programming language such as Java, Python, or Node.js.</li>
+            <li class="list-group-item">Experience with backend frameworks and libraries, such as Spring Boot, Django, or Express.js.</li>
+            <li class="list-group-item">Knowledge of database systems, including SQL and NoSQL databases like MySQL, PostgreSQL, or MongoDB.</li>
+            <li class="list-group-item">Familiarity with RESTful API development and integration.</li>
+            <li class="list-group-item">Understanding of server-side rendering, caching, and performance optimization techniques.</li>
+            <li class="list-group-item">Experience with version control systems like Git.</li>
+            <li class="list-group-item">Knowledge of security best practices and common vulnerabilities.</li>
+            <li class="list-group-item">Understanding of software development principles, including testing and debugging.</li>
+            <li class="list-group-item">Strong problem-solving and analytical skills.</li>
+            <li class="list-group-item">Excellent communication and collaboration abilities.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <div class="col-lg-6 vacancy-card">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mobile App Developer</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Mobile Solutions Ltd.</h6>
+            <p class="card-text">Sydney, Australia</p>
+            <p class="card-text">We are seeking a skilled Mobile App Developer to join our team...</p>
+            <p class="card-text"><strong>Requirements:</strong></p>
+            <ul>
+              <li>Experience in mobile app development for Android and iOS platforms</li>
+              <li>Proficiency in programming languages such as Java or Swift</li>
+              <li>Knowledge of mobile UI/UX principles and best practices</li>
+              
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal5">
+              Job Description
+            </button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+ 
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="jobModal5" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel5"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jobModalLabel5">Mobile app Developer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We are looking for a talented Mobile App Developer to join our software development team. The successful candidate will be responsible for designing, coding, and testing high-quality software applications using C++ programming language.</p>
+          <h2>Responsibilities:</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Designing, developing, and maintaining mobile applications for iOS and/or Android platforms.</li>
+      <li class="list-group-item">Collaborating with cross-functional teams to define project requirements, scope, and deliverables.</li>
+      <li class="list-group-item">Translating user interface designs and wireframes into high-quality code.</li>
+      <li class="list-group-item">Implementing mobile app features and functionality using programming languages such as Swift (for iOS) or Java/Kotlin (for Android).</li>
+      <li class="list-group-item">Ensuring optimal performance, usability, and responsiveness of mobile applications.</li>
+      <li class="list-group-item">Conducting thorough testing and debugging to identify and resolve issues.</li>
+      <li class="list-group-item">Integrating mobile apps with backend services and APIs.</li>
+      <li class="list-group-item">Keeping up to date with the latest mobile app development trends, technologies, and best practices.</li>
+      <li class="list-group-item">Maintaining code integrity and organization through version control systems like Git.</li>
+    </ul>
+
+    <h2>Requirements:</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Proficiency in mobile app development for iOS and/or Android platforms.</li>
+      <li class="list-group-item">Experience with mobile app development frameworks and tools, such as Xcode, Android Studio, or Flutter.</li>
+      <li class="list-group-item">Strong knowledge of programming languages such as Swift, Java, or Kotlin.</li>
+      <li class="list-group-item">Familiarity with mobile app design principles and user interface guidelines.</li>
+      <li class="list-group-item">Understanding of RESTful APIs and integration of backend services.</li>
+      <li class="list-group-item">Experience with mobile app testing, debugging, and performance optimization.</li>
+      <li class="list-group-item">Knowledge of version control systems like Git.</li>
+      <li class="list-group-item">Problem-solving skills and attention to detail.</li>
+      <li class="list-group-item">Excellent communication and collaboration abilities.</li>
+    </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <div class="col-lg-6 vacancy-card">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">UI/UX Designer</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Design Studio Inc.</h6>
+            <p class="card-text">Paris, France</p>
+            <p class="card-text">We are looking for a creative UI/UX Designer to join our design team...</p>
+            <p class="card-text"><strong>Requirements:</strong></p>
+            <ul>
+              <li>Strong knowledge of user-centered design principles</li>
+              <li>Proficiency in design tools such as Sketch or Adobe XD</li>
+              <li>Experience in creating wireframes and prototypes</li>
+              <li>Ability to collaborate with cross-functional teams</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal6">
+              Job Description
+            </button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+ 
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="jobModal6" tabindex="-1" role="dialog" aria-labelledby="jobModalLabel6"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jobModalLabel6">UI/UX Designer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We are looking for a talented UI/UX Designer to join our software development team. The successful candidate will be responsible for designing, coding, and testing high-quality software applications using C++ programming language.</p>
+          <h2>Responsibilities:</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Creating and iterating on user interface designs, wireframes, and prototypes for web and mobile applications.</li>
+      <li class="list-group-item">Understanding user needs, business requirements, and project goals to inform design decisions.</li>
+      <li class="list-group-item">Collaborating with cross-functional teams, including developers and stakeholders, to gather feedback and refine designs.</li>
+      <li class="list-group-item">Conducting user research, usability testing, and analysis to gain insights and validate design choices.</li>
+      <li class="list-group-item">Developing and maintaining design systems, style guides, and UI pattern libraries.</li>
+      <li class="list-group-item">Creating user flows, journey maps, and information architectures to ensure intuitive and efficient user experiences.</li>
+      <li class="list-group-item">Creating visually appealing and aesthetically pleasing designs that align with brand guidelines and user expectations.</li>
+      <li class="list-group-item">Collaborating with development teams to ensure successful implementation of designs.</li>
+      <li class="list-group-item">Staying up to date with industry trends, design tools, and emerging technologies in the UI/UX field.</li>
+    </ul>
+
+    <h2>Requirements:</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Strong proficiency in UI/UX design principles, practices, and tools.</li>
+      <li class="list-group-item">Experience with design software such as Sketch, Figma, Adobe XD, or similar tools.</li>
+      <li class="list-group-item">Knowledge of user-centered design methodologies and usability principles.</li>
+      <li class="list-group-item">Familiarity with prototyping tools like InVision, Marvel, or Axure.</li>
+      <li class="list-group-item">Understanding of front-end development technologies (HTML, CSS, JavaScript) to ensure design feasibility and collaboration with developers.</li>
+      <li class="list-group-item">Strong visual design skills, including typography, color theory, and layout composition.</li>
+      <li class="list-group-item">Ability to empathize with users and advocate for their needs throughout the design process.</li>
+      <li class="list-group-item">Excellent communication, collaboration, and presentation skills.</li>
+      <li class="list-group-item">Attention to detail and a strong focus on delivering high-quality designs.</li>
+    </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="submit.html" class="apply-button btn  btn-primary" onclick="showSuccessMessage()">Apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <!-- Add more vacancy cards here... -->
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function applyNow(vacancy) {
+      // You can implement your own logic here for handling the "Apply Now" action
+      console.log('Applying for', vacancy);
+      // Add your code for applying to the specific vacancy
+    }
+
+    // Add fade-in animation to cards when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      var cards = document.getElementsByClassName('vacancy-card');
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].classList.add('fade-in-animation');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    body {
+      padding-top: 60px;
+      background-color: white; /* Set the desired background color here */
+    }
+
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #fff;
+    }
+
+    .jumbotron {
+      background-image: url("background.jpg");
+      background-size: cover;
+      color: #fff;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      text-align: center;
+    }
+
+    .jumbotron h1 {
+      font-size: 48px;
+    }
+
+    .search-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      padding: 80px 0;
+    }
+
+    .content-section h2 {
+      margin-bottom: 40px;
+    }
+
+    .content-section p {
+      font-size: 18px;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      color: #333;
+      margin-right: 10px;
+    }
+
+    /* Additional CSS for About section */
+    .about-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .about-section h2 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      color: #333;
+      margin-right: 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #e91e63; /* Pink color */
+    }
+
+    /* Define colors for each social media icon */
+    .social-icons .fa-facebook {
+      color: #1877f2; /* Facebook blue */
+    }
+
+    .social-icons .fa-twitter {
+      color: #1da1f2; /* Twitter blue */
+    }
+
+    .social-icons .fa-instagram {
+      color: #e4405f; /* Instagram pink */
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .footer h4 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      color: #e91e63; /* Pink color */
+    }
+
+    /* Additional CSS for Contact section */
+    #contact p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-info {
+      margin-bottom: 40px;
+    }
+
+    .contact-info h4 {
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+    }
+
+    .contact-form {
+      margin-bottom: 40px;
+    }
+
+    .contact-form h4 {
+      margin-bottom: 20px;
+    }
+
+    .contact-form form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+    }
+
+    .contact-form button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .social-icons {
+      text-align: center;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #333;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Job Search</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="signup.html">Signup</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="home" class="jumbotron" style="height: 500px;background-image: url(img5.jpg); height: 600px; background-repeat: no-repeat; background-position: center;">
+    <div class="container" >
+        <h1 style="font-family: 'Times New Roman', Times, serif;">Build your carrier with us</h1><br><br><br>
+      <h1 style="font-family: 'Times New Roman', Times, serif;">Find Your Dream Job</h1><br>
+      <form class="search-form">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter job title or keywords">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    
+  </script>
+
+
+
+  <div id="about" class="content-section" style="background-image: url(img8.jpeg);  background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 40px; color: #fff; font-family: 'Times New Roman', Times, serif;">About Us</h2>
+      <ul style="color:white;">
+      <li><p>Welcome to Job Search, the leading online platform for job seekers worldwide. With a focus on simplicity,
+        convenience, and effectiveness, our website is designed to empower individuals in their quest for meaningful
+        employment.</p></li>
+        <li><p>At Job Search, we believe that finding the right job should be accessible to everyone. We have built a
+        comprehensive database of job listings from reputable companies across industries, enabling you to explore a
+        wide range of opportunities that match your skills, experience, and aspirations.</p></li>
+        <li><p>Our user-friendly interface allows you to customize your job search criteria, including location, industry, job
+        title, and more. You can also create personalized job alerts, so you never miss out on new openings that align
+        with your interests.</p></li>
+        <li><p>As you navigate through our website, you'll discover valuable resources to enhance your job search. Our blog
+        features expert advice on resume writing, interview techniques, career development, and industry trends. We also
+        offer career guidance articles and interactive tools to help you assess your strengths, identify your career
+        path, and improve your professional skills.</p></li>
+        <li><p>Job Search is committed to ensuring a seamless experience for our users. We prioritize the security and privacy
+        of your personal information, and our dedicated support team is available to address any inquiries or concerns
+        you may have along the way.</p></li>
+        <li><p>Join our growing community of job seekers and unlock your potential. Whether you're a recent graduate, a
+        seasoned professional, or someone looking to make a career change, Job Search is here to guide you on your
+        journey to success.</p></li>
+    </ul>
+    </div>
+  </div>
+
+
+  <div id="contact" class="content-section bg-light" style="background-image: url(img15.jpeg);  background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <div class="container">
+      <h2 style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 60px;">Contact Us</h2>
+      <p style="font-style: italic;"><b>If you have any questions, feedback, or inquiries, please don't hesitate to reach out to us. Our dedicated team
+        is here to assist you.</b></p>
+
+       
+
+      <div class="contact-form">
+        <h4 style="text-align: center;">Send us a Message</h4>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="row">
+      <div class="contact-info col-md-4">
+        <h4>Contact Information</h4>
+        <address><i>123 Job Street, City Name
+            Phone: 123-456-7890
+            Email: info@jobsearch.com</i></address>
+      </div>
+      
+      <div class="social-icons col col-md-4">
+        <h3><b>Join with us:-</b></h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>About Job Search</h4>
+          <p>Job Search is a leading online job search platform that connects job seekers with employers. We provide a
+            comprehensive database of job listings and resources to empower individuals in their career journeys.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Contact Information</h4>
+          <p>123 Job Street, City Name</p>
+          <p>Phone: 123-456-7890</p>
+          <p>Email: info@jobsearch.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+<script>
+  
+</script>
+
+</html>
