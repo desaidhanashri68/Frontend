@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Items</title>
+    <link rel="stylesheet" href="./css/Home_Style.css">
+    <link rel="stylesheet" href="./css/View_Product_After_Login.css">
+    <link rel="stylesheet" href="./css/card-item.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=Kumbh+Sans:wght@400;700&family=Noto+Sans&family=Open+Sans:ital,wght@0,500;1,400&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="navbar">
+                    <ul class="nav-links">
+                        <li class="list-item"><a href="index.html">Home</a></li>
+                        <li class="list-item"><a href="about.html">About Us</a></li>
+                        <li class="list-item"><a href="product.html">Product</a></li>
+                        <li class="list-item"><a href="category.html">Category</a></li>
+                        <li class="list-item"><a href="Login.html">Login</a></li>
+                        <li class="list-item"><a href="Register.html">Register</a></li>
+                        <li class="list-item"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="burger" onclick="navSlide()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-nav">
+            <ul class="sub-nav-links">
+                <li class="list-item"><a href="category.html">Book Order</a></li>
+                <li class="list-item"><a href="#myorder">My Order</a></li>
+                <li class="list-item"><a href="#mycart">My Cart</a></li>
+                <li class="list-item"><a href="Change_password.html">Change Password</a></li>
+                <li class="list-item"><a href="#logout">Logout</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <h1>CARD ITEMS</h1>
+
+            <!-- <div class="row">
+                <div class="column" style="background-color:#bbb;">
+                    <h2>Image</h2>
+                    <p></p>
+                </div>
+                <div class="column" style="background-color:#ccc;">
+                    <h2>Product Name</h2>
+                    <p></p>
+                </div>
+                <div class="column" style="background-color:#ddd;">
+                    <h2>Cost</h2>
+                    <p></p>
+                </div>
+                <div class="column" style="background-color:#ddd;">
+                    <h2>Quantity</h2>
+                    <p></p>
+                </div>
+                <div class="column" style="background-color:#ddd;">
+                    <h2>Total</h2>
+                    <p></p>
+                </div>
+                <div class="column" style="background-color:#ddd;">
+                    <h2>Action</h2>
+                    <p></p>
+                </div>
+            </div> -->
+
+            <div class="grid">
+                <div class="first-grid">
+                    Image
+                </div>
+                <div class="second-grid">
+                    Name
+                </div>
+                <div class="third-grid">
+                    cost
+                </div>
+                <div class="forth-grid">
+                    Action
+                </div>
+                <div class="fifth-grid">
+                    <p id="name">1</p>
+                </div>
+                <div class="sixth-grid">
+                    <p id="category">2</p>
+                </div>
+                <div class="seventh-grid">
+                    <p id="stock">3</p>
+                </div>
+                <div class="eighth-grid">
+                    <p id="price">4</p>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button onclick="placeorder()">Place order</button>
+            </div>
+        </main>
+
+        <footer>
+            <img src="./img/logo.png" alt="">
+            <h2>Manufactured and directed by</h2>
+            <h2>Agrotech products and research center</h2>
+            <h5>kalgaon,Tal-Patan,Dist-Satara,Maharashtra </h5>
+            <h5>Farmtech@gmail.com | +91 7057076005</h5>
+        </footer>
+    </div>
+
+    </div>
+
+    <script>
+        document.getElementById('name').innerHTML = 'bajra';
+        document.getElementById('category').innerHTML = 'Grains';
+        document.getElementById('stock').innerHTML = '12';
+        document.getElementById('price').innerHTML = '60';
+        function placeorder()
+        {
+            window.location = 'make_payment.html';
+        }
+    </script>
+</body>
